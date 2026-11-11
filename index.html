@@ -171,19 +171,6 @@
         font-style: normal;
         color: #f0b93e;
       }
-      .hero .seal {
-        flex: none;
-        margin-top: 13px;
-        transform: rotate(-4deg);
-        background: #c8402f;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        line-height: 1;
-        padding: 5px 7px;
-        border-radius: 6px;
-      }
       .hero .ov-label {
         position: relative;
         z-index: 1;
@@ -562,7 +549,6 @@
       @media (max-width: 380px) {
         .hero { padding: 16px 16px 15px; }
         .hero .date-big { font-size: 47px; }
-        .hero .seal { margin-top: 10px; }
         .hero .ov b { font-size: 20px; }
         .hero .ov { padding: 2px 7px 0; }
         .hero .headline .hl-title { font-size: 15.5px; }
@@ -579,11 +565,10 @@
       <header class="hero">
         <div class="top">
           <div class="dow"><i></i>2026年 · 星期三</div>
-          <div class="updated">更新于 08:20</div>
+          <div class="updated">更新于 09:10</div>
         </div>
         <div class="main">
           <div class="date-big">11月<em>11日</em></div>
-          <span class="seal">双11</span>
         </div>
         <a class="headline" href="#ai">
           <span class="hl-line">
@@ -594,10 +579,10 @@
         </a>
         <div class="ov-label">今日总览</div>
         <div class="overview">
-          <a class="ov" href="#tasks"><b class="amber">3<em>件</em></b><span>等你拍板</span></a>
-          <a class="ov" href="#tasks"><b>5<em>项</em></b><span>任务在跟进</span></a>
-          <div class="ov"><b>19<em>条</em></b><span>资讯 · 8 个领域</span></div>
-          <div class="ov"><b>0.8<em>℃</em></b><span>合肥今晨最低</span></div>
+          <a class="ov" href="#tasks"><b class="amber">1<em>件</em></b><span>等你拍板</span></a>
+          <a class="ov" href="#tasks"><b>3<em>项</em></b><span>任务在跟进</span></a>
+          <div class="ov"><b>34<em>条</em></b><span>资讯 · 8 个领域</span></div>
+          <div class="ov"><b>6~15<em>℃</em></b><span>合肥今日气温 · 阴</span></div>
         </div>
         <div class="ticker">
           <div class="tk-label">各版头条</div>
@@ -624,10 +609,8 @@
 
       <!-- ===== 等你拍板 ===== -->
       <div class="decide">
-        <h2>⏳ 有 3 件事等你拍板</h2>
+        <h2>⏳ 有 1 件事等你拍板</h2>
         <ul>
-          <li><b>短片五项待定</b> —— 镜4/5 v3 验收、镜6–10 去向、片名、90 秒剪法、「一个约定」译法二选一。 <a href="#tasks">去看进度</a></li>
-          <li><b>双11 三项选择（就是今天）</b> —— 鼠标垫二选一、加湿器要不要、带鱼屏是不是曲面，尽快定。</li>
           <li><b>副业方向重选</b> —— 会展参展商内容包已作废，待从其余候选里选一个。</li>
         </ul>
       </div>
@@ -642,38 +625,10 @@
 
         <div class="task">
           <div class="t-head">
-            <h3>像素短片《有人停下来》</h3>
-            <span class="badge wait">等你验收</span>
-          </div>
-          <p>镜1–5 成品已做，其中<b>镜4、镜5 的 v3 待你验收</b>；镜6–10 未开工。3 秒开机式开头与完整版配乐已交付，上报评委的介绍（104 字版 / 约 285 字版）也已交付。待定五项：<b>镜4/5 v3 验收、镜6–10 去向、片名、90 秒剪法、「一个约定」译法二选一</b>。</p>
-          <div class="shots" aria-hidden="true">
-            <i class="done"></i><i class="done"></i><i class="done"></i><i class="review"></i><i class="review"></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <div class="shots-legend">
-            <span class="lg-done">镜1–3 已定版</span>
-            <span class="lg-review">镜4–5 待验收</span>
-            <span>镜6–10 未开工</span>
-          </div>
-          <div class="pbar" aria-hidden="true"><i style="width:50%;background:var(--wait)"></i></div>
-          <div class="shots-legend"><span>整体进度约 50%</span></div>
-        </div>
-
-        <div class="task">
-          <div class="t-head">
             <h3>头像每日换装</h3>
             <span class="badge doing">自动进行中</span>
           </div>
           <p>今天约 <b>09:20</b> 自动换一件新衣服，在卫衣、T恤、牛仔外套、毛衣、衬衫、运动外套之间轮换，不重复最近穿过的款式。形象和搞怪表情保持不变。</p>
-        </div>
-
-        <div class="task">
-          <div class="t-head">
-            <h3>双11 购物清单</h3>
-            <span class="badge wait">等你定三项</span>
-          </div>
-          <p><b>今天就是双11</b>，三项还没定，尽快拍板：<b>鼠标垫二选一</b>（樱桃 900×350mm ¥89 / 小米 800×400mm ¥49）、<b>加湿器要不要</b>、<b>带鱼屏是不是曲面</b>（影响要不要加 ¥99 挂灯）。其余首选已定，合计约 ¥330–370，在 500 元预算内。</p>
-          <div class="pbar" aria-hidden="true"><i style="width:72%;background:var(--wait)"></i></div>
-          <div class="shots-legend"><span>预算 ¥500 · 首选组合约占 66%–74%</span></div>
         </div>
 
         <div class="task">
@@ -729,6 +684,42 @@
           <p>定位是 AI 生活搭子：能在 Rokid AI 眼镜上<b>找店、比商品、找展览</b>，把个人智能体直接做进了日常消费场景。</p>
           <div class="src">来源：生财风向标 <a href="https://www.218s.cn/" target="_blank" rel="noopener">218s.cn →</a></div>
         </div>
+
+        <div class="card">
+          <h3>Anthropic 同日发布 Fable 5.2 与 Mythos 5.2：一个模型，两道门</h3>
+          <p>Fable 5.2 面向所有人，响应速度比上一代快约 <b>30%</b>；测试中它指挥 <b>1000 多个 AI 智能体</b>、花 8 天从零写出一个能开机运行的操作系统。能力更强的 Mythos 5.2 不公开发售，只给通过网络安全与生命科学<b>资质审核</b>的机构——前沿模型开始分级准入了。</p>
+          <div class="src">来源：The Neuron <a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-tuesday-november-10-2026/" target="_blank" rel="noopener">theneuron.ai →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>Meta 发布最便宜的小模型 Muse Ember：Agent 拼的是账单</h3>
+          <p>定价只要 <b>输入 $0.10 / 输出 $0.50</b>（每百万 token），专干 Agent 每天重复的活：工具调用、代码子任务、长文档抽取。信号很明确：让智能体全天跑下去，先倒下的往往不是能力，是<b>账单</b>。</p>
+          <div class="src">来源：The Daily Post of AI <a href="https://medium.com/daily-post-of-ai/the-daily-post-of-ai-issue-36-111ed715219b" target="_blank" rel="noopener">medium.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>Google 一年连发四款第八代 TPU</h3>
+          <p>周一再添 <b>TPU 8tx 与 8i Max</b> 两款系统，一年内凑齐四款第八代 TPU，为公司首次。谷歌没有公布价格与上市时间——算力军备竞赛还在加速。</p>
+          <div class="src">来源：The Daily Post of AI <a href="https://medium.com/daily-post-of-ai/the-daily-post-of-ai-issue-36-111ed715219b" target="_blank" rel="noopener">medium.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>NVIDIA 开源自动驾驶模型 Alpamayo 2 Edge 权重</h3>
+          <p>11 月 10 日，NVIDIA 把 <b>20 亿参数</b>的车载自动驾驶模型权重放上 Hugging Face，附部署配方与评测工具；在其闭环仿真评测中，两次有责事故的间隔里程达到 <b>9.87 公里</b>，明显领先同级小模型。</p>
+          <div class="src">来源：Unite.AI <a href="https://www.unite.ai/nvidia-releases-alpamayo-2-edge-weights-for-autonomous-driving/" target="_blank" rel="noopener">unite.ai →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>蚂蚁灵波开源触觉基础模型 LingBot-Touch：给机器人补上「手感」</h3>
+          <p>11 月 10 日，蚂蚁灵波科技开源触觉基础模型 <b>LingBot-Touch</b>，基于近 <b>5000 小时</b>真实触觉数据预训练，覆盖磁触觉、视触觉、压阻式三类传感原理。接入后，四种动作模型在 <b>26 项真机测试</b>中的平均任务成功率提高约 <b>14–26 个百分点</b>。技术报告、模型与代码已在 Hugging Face、GitHub 和魔搭社区开源——具身智能的竞争，开始从「看得清、想得明」卷到「摸得准」。</p>
+          <div class="src">来源：AIbase（经 666News 转载） <a href="https://www.666news.net/2026/11/10/aibase32203/" target="_blank" rel="noopener">666news.net →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>NVIDIA 发布机器人基础模型 GR00T 2：看人干活，学会干活</h3>
+          <p>NVIDIA 在奥斯汀机器人学习会议上发布 <b>GR00T 2</b>：主要靠<b>观看人类操作的视频</b>来学新的 manipulation 技能，而不是逐条编程。要注意官方口径的边界：NVIDIA 称其「开放」，但代码要到 <b>12 月</b>才到，许可证与权重发布时间尚未公布——引用它的高成功率数字前，先等权重真正落地。</p>
+          <div class="src">来源：The Daily Post of AI <a href="https://medium.com/daily-post-of-ai/the-daily-post-of-ai-issue-36-111ed715219b" target="_blank" rel="noopener">medium.com →</a></div>
+        </div>
       </section>
 
       <!-- ===== 会展行业 ===== -->
@@ -767,6 +758,12 @@
         </div>
 
         <div class="card">
+          <h3>合肥今日天气：阴，6~15℃</h3>
+          <p>据中国天气网今日预报（数据来源：中央气象台），合肥今天<b>阴，6~15℃</b>，东南风小于 3 级，昼夜温差近 10℃，早晚出门加件外套。明天（12 日）仍以阴到多云为主。</p>
+          <div class="src">来源：中国天气网 <a href="https://www.weather.com.cn/weather/101220101.shtml?from=henan" target="_blank" rel="noopener">weather.com.cn →</a></div>
+        </div>
+
+        <div class="card">
           <h3>合肥科学文化消费嘉年华今起开幕</h3>
           <p>11月11–22日在科技馆蜀西湖馆区北广场举行：“大科学装置科普转化”特展集中讲 <b>EAST 等六项大科学装置</b>；11、12 日科技馆全天 <b>9:00–21:00</b> 开放。</p>
           <div class="src">来源：腾讯新闻 <a href="https://news.qq.com/rain/a/20261108A0ANST00" target="_blank" rel="noopener">news.qq.com →</a></div>
@@ -795,13 +792,13 @@
 
         <div class="card">
           <h3>AI 短片实战攻略走红：问题要在文字阶段拦住</h3>
-          <p>一套被大量转发的流程：<b>Claude Code 当导演、Codex 画分镜首尾帧、Seedance 做动画</b>，一天 5.4 万收藏、310 万阅读。核心经验只有一句：<b>在文字阶段拦问题，别让问题进视频</b>——和你现在逐帧做关键帧是同一个思路。</p>
+          <p>一套被大量转发的流程：<b>Claude Code 当导演、Codex 画分镜首尾帧、Seedance 做动画</b>，一天 5.4 万收藏、310 万阅读。核心经验只有一句：<b>在文字阶段拦问题，别让问题进视频</b>——分镜、首尾帧先在图文阶段定死，再进入生成环节返工最少。</p>
           <div class="src">来源：AIletter <a href="https://ailetter.ai.kr/en/d/2026-11-06/7" target="_blank" rel="noopener">ailetter.ai.kr →</a></div>
         </div>
 
         <div class="card">
           <h3>AI 像素视频生成指南：先静帧，再动起来</h3>
-          <p>最稳的流程是<b>先用像素专用模型做静帧，再用图生视频动起来</b>；直接文生视频容易丢掉像素网格感。对正在做的像素短片，这条正好对上“静帧打底”的定版规则。</p>
+          <p>最稳的流程是<b>先用像素专用模型做静帧，再用图生视频动起来</b>；直接文生视频容易丢掉像素网格感。做像素风短片的人，这条流程值得参考。</p>
           <div class="src">来源：PicassoIA <a href="https://blog.picassoia.com/ai-pixel-art-video-generator-retro-clips-free-tools-and-prompt-ideas" target="_blank" rel="noopener">blog.picassoia.com →</a></div>
         </div>
       </section>
@@ -811,7 +808,7 @@
         <div class="sec-head">
           <span class="bar" style="background:var(--c-money)"></span>
           <h2>用 AI 赚钱</h2>
-          <span class="note">只看有明细的真实案例</span>
+          <span class="note">真实案例 · 路子 · 思考</span>
         </div>
 
         <div class="card">
@@ -830,6 +827,42 @@
           <h3>生财风向标：两个低门槛机会</h3>
           <p>剪映电脑版新增 Hub 功能，投稿被选中可拿 <b>5000 元</b>奖励；微信小游戏流量主门槛从 500 降到 <b>100</b>。</p>
           <div class="src">来源：生财风向标 <a href="https://www.218s.cn/" target="_blank" rel="noopener">218s.cn →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>真实案例：35 岁转行做 AI 短剧，月入过万</h3>
+          <p>据 ETtoday 报道，做过餐饮、服装和直播带货的张正谦今年 3 月转做 AI 短剧，原创末日科幻系列全网播放量达 <b>数千万次</b>，目前月均收入 <b>过万元</b>。但要看清结构：钱来自平台流量分成、广告合作和<b>开班教学</b>三块——爆款率依然很低，这行不是投流就能赚。</p>
+          <div class="src">来源：ETtoday（经 Rojaklah 转载） <a href="https://rojaklah.com/2026/11/05/man-create-ai-short-film-earn-money-tkh-051126/" target="_blank" rel="noopener">rojaklah.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>案例拆解：50 元一份的提示词模板，滚出三层收入</h3>
+          <p>阿里云开发者社区的一篇案例自述：一位月薪 5000 元的行政，把自己会写的电商文案做成 <b>50 元一份</b>的 AI 提示词模板反复卖；买过模板的小老板再转成<b>按月付费的代运营</b>；同时发经验内容吃流量分成——三个月合计约 <b>8 万元</b>。值得学的是结构：先卖小产品筛客户，再把服务做成月费。（此为作者自述，数字未经独立核实。）</p>
+          <div class="src">来源：阿里云开发者社区 <a href="https://developer.aliyun.com/article/1774834" target="_blank" rel="noopener">developer.aliyun.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>海外有一个只收「已核验收入」的 AI 副业库</h3>
+          <p>The AI Receipts 汇总了 67 个 AI 副业项目，只收录<b>支付平台核验过</b>的真实营收：其中 59 个有近期数据，月经常性收入中位数约 <b>2.11 万美元</b>。看榜单别只盯头部——中位数和「普通人可复制」的标记，才是判断自己能不能下场的参考。</p>
+          <div class="src">来源：The AI Receipts <a href="https://theaireceipts.com/ai-side-hustles/" target="_blank" rel="noopener">theaireceipts.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>一个值得想的数据：83% 的企业说不清 AI 的钱花得值不值</h3>
+          <p>英国一项对 504 位企业决策者的调查显示，<b>83%</b> 的人无法证明至少一部分 AI 投入的回报。反过来看机会：市场不缺卖工具的人，缺的是能帮企业<b>把 AI 用出结果、把账算清</b>的人——这正是小团队接「落地陪跑」类服务的切入口。</p>
+          <div class="src">来源：Precise Impact AI Daily Brief <a href="https://www.preciseimpact.ai/briefing/ai-news-digest-2026-11-10" target="_blank" rel="noopener">preciseimpact.ai →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>路子复盘：卖「整理」和「预览」，不卖一键生成</h3>
+          <p>此前两轮副业调研筛出的痛点向方向，共同点是<b>不拼生成质量、拼交付环节</b>：<b>录音转写校对＋纪要整理</b>——讯飞人工精转 80 元/小时音频、纯机器转写只要 0.33 元/分钟，中间「校对＋结构化纪要」这一层可卖 30–60 元/小时；<b>小微商家票据/流水整理成台账</b>，99–299 元/月·户，只整理、不碰代账报税；<b>装修效果预览</b>——传统效果图 300–800 元/张要等 3–5 天，AI 预览卖 49–99 元/单空间，卖的是「先看一眼再决定」的速度。会展行业的活已按你的要求整体排除，不在这份名单里。</p>
+          <div class="src">来源：本看板此前交付的两轮副业调研报告（蓝海向＋痛点向）</div>
+        </div>
+
+        <div class="card">
+          <h3>一个冷静的预期：闲鱼 AI 服务卖家月均成交 897 元</h3>
+          <p>闲鱼官方口径的数据：AI 服务卖家<b>月均成交只有 897 元</b>。这不是泼冷水，是定价锚——副业第一阶段的目标应该是<b>每月稳定多几百到一两千</b>，靠复购和月费制攒起来，而不是找一条「爆款路子」。凡是承诺全自动、躺赚、月入过万的，和上面那条 16 天卖 0 日元的实测放在一起看。</p>
+          <div class="src">来源：闲鱼官方数据（见此前交付的副业调研报告）</div>
         </div>
       </section>
 
@@ -865,7 +898,7 @@
         <div class="sec-head">
           <span class="bar" style="background:var(--c-travel)"></span>
           <h2>旅游与美食</h2>
-          <span class="note">美食月与双11餐券</span>
+          <span class="note">美食月进行中</span>
         </div>
 
         <div class="card">
@@ -874,11 +907,6 @@
           <div class="src">来源：PR TIMES <a href="https://prtimes.jp/main/html/rd/p/000000111.000010540.html" target="_blank" rel="noopener">prtimes.jp →</a></div>
         </div>
 
-        <div class="card">
-          <h3>双11 酒店餐券今天开抢</h3>
-          <p>台北远东香格里拉 <b>5 款限定餐券</b> 0 点开卖；高雄万豪连住快闪低至 <b>27 折</b>。</p>
-          <div class="src">来源：Up Media <a href="https://www.upmedia.mg/tw/lifestyle/travel/273764" target="_blank" rel="noopener">upmedia.mg →</a></div>
-        </div>
       </section>
 
       <!-- ===== 文化与读书 ===== -->
