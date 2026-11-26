@@ -3,69 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#0d1522" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#f2f5f7" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f3eee2" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="每日看板" />
     <meta name="description" content="每天一页：你关心的八个领域资讯，加上 Muse 手头任务的最新进度。" />
     <link rel="icon" href="data:," />
     <title>每日看板</title>
     <style>
       :root {
-        --bg: #f2f5f7;
-        --surface: #ffffff;
-        --surface-2: #eef2f5;
-        --ink: #16222e;
-        --ink-2: #43536a;
-        --muted: #66788a;
-        --line: #dde5ec;
-        --accent: #1668c4;
-        --amber-bg: #fdf3e0;
-        --amber-line: #f0d9a8;
-        --amber-ink: #8a5a00;
-        --shadow: 0 1px 2px rgba(16, 34, 54, 0.05), 0 8px 24px -12px rgba(16, 34, 54, 0.14);
-        --c-ai: #2456c8;
-        --c-create: #a02c6d;
-        --c-money: #a86e00;
-        --c-book: #7a4a21;
-        --c-health: #1f7a4d;
-        --c-events: #c8501f;
-        --c-music: #0e7490;
-        --c-hefei: #b3352c;
-        --ok: #1f8a4c;
-        --wait: #b97a0e;
-        --stuck: #c23b2e;
-        --doing: #2456c8;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #0e141c;
-          --surface: #182130;
-          --surface-2: #1f2a3c;
-          --ink: #e9eff5;
-          --muted: #93a5b8;
-          --line: #2a3749;
-          --accent: #6aa8ec;
-          --amber-bg: #2c2413;
-          --amber-line: #55451d;
-          --amber-ink: #e8bc62;
-          --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 26px -14px rgba(0, 0, 0, 0.6);
-          --c-ai: #7ea6f2;
-          --c-create: #e58bbd;
-          --c-money: #e0aa3e;
-          --c-book: #c99a63;
-          --c-health: #4cc084;
-          --c-events: #f08a5c;
-          --c-music: #4cc3d9;
-          --c-hefei: #f0857d;
-          --ok: #4cc084;
-          --wait: #e0aa3e;
-          --stuck: #f0857d;
-          --doing: #7ea6f2;
-        }
+        --bg: #f3eee2;
+        --paper: #faf7ee;
+        --ink: #1b1815;
+        --ink-2: #4c463e;
+        --muted: #7d7466;
+        --line: #ddd5c2;
+        --line-soft: #e7e0cf;
+        --accent: #b1502e;
+        --accent-soft: #d97a52;
+        --num: #e0d7c0;
+        --ok: #3d7a4e;
+        --wait: #a06a12;
+        --stuck: #b03a2a;
+        --doing: #2f5aa8;
+        --serif: "Songti SC", "STSongti-SC", "STSong", "SimSun", Georgia, "Times New Roman", serif;
+        --sans: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
       }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
@@ -73,8 +38,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--ink);
-        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-          "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+        font-family: var(--sans);
         font-size: 16px;
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
@@ -83,339 +47,323 @@
       .wrap {
         max-width: 680px;
         margin: 0 auto;
-        padding: 14px 14px calc(34px + env(safe-area-inset-bottom));
+        padding: 18px 20px calc(40px + env(safe-area-inset-bottom));
       }
 
-      /* ---------- Hero（文字头版 · 报纸式总览） ---------- */
-      .hero {
-        position: relative;
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        background:
-          radial-gradient(560px 300px at 88% -60px, rgba(240, 185, 62, 0.16), transparent 62%),
-          linear-gradient(158deg, #172a42 0%, #101c2e 52%, #0b1420 100%);
-        color: #fff;
-        padding: 20px 20px 18px;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #c8402f 0 34%, #f0b93e 34% 67%, #2e7fc4 67% 100%);
-      }
-      .hero::after {
-        content: "26";
-        position: absolute;
-        top: -36px;
-        right: -6px;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 170px;
-        font-weight: 900;
-        line-height: 1;
-        color: transparent;
-        -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.12);
-        pointer-events: none;
-      }
-      .hero .top {
-        position: relative;
-        z-index: 1;
+      /* ---------- 刊头 Masthead ---------- */
+      .masthead { border-top: 3px solid var(--ink); padding-top: 10px; }
+      .masthead .mh-top {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 10px;
+        align-items: baseline;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.24em;
+        color: var(--ink-2);
+        border-bottom: 1px solid var(--ink);
+        padding-bottom: 9px;
       }
-      .hero .dow {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        color: rgba(255, 255, 255, 0.72);
+      .masthead .mh-top .accent { color: var(--accent); }
+      .masthead .brand {
+        text-align: center;
+        padding: 20px 0 4px;
       }
-      .hero .dow i {
-        width: 7px; height: 7px;
-        border-radius: 50%;
-        background: #e4573d;
-        flex: none;
+      .masthead .brand .en {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 41px;
+        line-height: 1.1;
+        letter-spacing: 0.01em;
       }
-      .hero .updated {
-        flex: none;
+      .masthead .brand .zh {
+        margin-top: 7px;
         font-size: 12px;
         font-weight: 600;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.26);
-        border-radius: 999px;
-        padding: 4px 10px;
+        letter-spacing: 0.52em;
+        text-indent: 0.52em;
+        color: var(--muted);
       }
-      .hero .main {
-        position: relative;
-        z-index: 1;
-        margin-top: 12px;
+      .masthead .mh-meta {
+        margin-top: 16px;
         display: flex;
-        align-items: flex-start;
-        gap: 12px;
+        align-items: stretch;
+        gap: 14px;
+        border-top: 1px solid var(--line);
+        border-bottom: 3px double var(--ink);
+        padding: 12px 0 13px;
       }
-      .hero .date-big {
-        font-family: "Songti SC", "STSongti-SC", "STSong", "SimSun", Georgia, serif;
-        font-weight: 900;
-        font-size: 60px;
-        line-height: 1.05;
-        letter-spacing: 0.01em;
-        white-space: nowrap;
+      .datebox {
+        flex: none;
+        border: 1.5px solid var(--ink);
+        padding: 7px 14px 8px;
+        text-align: center;
       }
-      .hero .date-big em {
-        font-style: normal;
-        color: #f0b93e;
-      }
-      .hero .ov-label {
-        position: relative;
-        z-index: 1;
-        margin-top: 17px;
-        padding-top: 13px;
-        border-top: 1px solid rgba(255, 255, 255, 0.16);
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.22em;
-        color: rgba(255, 255, 255, 0.55);
-      }
-      .hero .overview {
-        position: relative;
-        z-index: 1;
-        margin-top: 9px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 0;
-      }
-      .hero .ov {
-        display: block;
-        color: #fff;
-        padding: 2px 10px 0;
-        border-left: 1px solid rgba(255, 255, 255, 0.14);
-      }
-      .hero .ov:first-child { padding-left: 0; border-left: none; }
-      .hero .ov:last-child { padding-right: 0; }
-      .hero .ov b {
-        display: block;
+      .datebox .d {
+        font-family: var(--serif);
         font-size: 25px;
         font-weight: 900;
-        line-height: 1.2;
+        line-height: 1.15;
         white-space: nowrap;
       }
-      .hero .ov b em {
+      .datebox .d em { font-style: normal; color: var(--accent); }
+      .datebox .w {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        text-indent: 0.3em;
+        color: var(--ink-2);
+        margin-top: 2px;
+      }
+      .masthead .mh-side {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        font-size: 13px;
+        line-height: 1.55;
+        color: var(--ink-2);
+      }
+      .masthead .mh-side .upd {
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .masthead .mh-side .upd b { color: var(--accent); font-weight: 800; }
+
+      /* ---------- 今日头条 ---------- */
+      .headline { display: block; color: var(--ink); padding: 20px 0 18px; }
+      .headline .hl-tag {
+        display: inline-block;
+        font-size: 11.5px;
+        font-weight: 800;
+        letter-spacing: 0.3em;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+        padding: 3px 9px 3px 12px;
+        margin-bottom: 11px;
+      }
+      .headline .hl-title {
+        display: block;
+        font-family: var(--serif);
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 1.42;
+        letter-spacing: 0.01em;
+      }
+      .headline .hl-sub {
+        display: block;
+        margin-top: 9px;
+        font-size: 14px;
+        line-height: 1.75;
+        color: var(--ink-2);
+      }
+
+      /* ---------- 今日总览：黑底索引带 ---------- */
+      .indexband {
+        background: var(--ink);
+        color: #f3eee2;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .indexband .ib {
+        display: block;
+        color: #f3eee2;
+        padding: 14px 13px 12px;
+        border-left: 1px solid rgba(243, 238, 226, 0.18);
+      }
+      .indexband .ib:first-of-type { border-left: none; }
+      .indexband .ib b {
+        display: block;
+        font-family: var(--serif);
+        font-size: 27px;
+        font-weight: 900;
+        line-height: 1.15;
+        white-space: nowrap;
+      }
+      .indexband .ib b em {
         font-style: normal;
         font-size: 13px;
         font-weight: 700;
         margin-left: 3px;
       }
-      .hero .ov b.amber { color: #f0b93e; }
-      .hero .ov span {
+      .indexband .ib b.hot { color: var(--accent-soft); }
+      .indexband .ib span {
         display: block;
-        margin-top: 2px;
-        font-size: 12px;
-        line-height: 1.45;
-        color: rgba(255, 255, 255, 0.75);
-      }
-      .hero .headline {
-        position: relative;
-        z-index: 1;
-        margin-top: 15px;
-        display: block;
-        background: linear-gradient(120deg, rgba(200, 64, 47, 0.24), rgba(255, 255, 255, 0.05) 58%);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        border-left: 3px solid #e4573d;
-        border-radius: 14px;
-        padding: 12px 14px 11px;
-        color: #fff;
-      }
-      .hero .headline .hl-line {
-        display: flex;
-        align-items: baseline;
-        gap: 9px;
-      }
-      .hero .headline .hl-tag {
-        flex: none;
-        background: #c8402f;
-        color: #fff;
+        margin-top: 3px;
         font-size: 11.5px;
-        font-weight: 800;
-        letter-spacing: 0.06em;
-        line-height: 1;
-        padding: 4px 8px;
-        border-radius: 6px;
-        position: relative;
-        top: -1px;
+        letter-spacing: 0.08em;
+        color: rgba(243, 238, 226, 0.72);
       }
-      .hero .headline .hl-title {
-        font-size: 16.5px;
+      .indexband .ib-label {
+        grid-column: 1 / -1;
+        padding: 10px 13px 0;
+        font-size: 10.5px;
         font-weight: 800;
-        line-height: 1.45;
-      }
-      .hero .headline .hl-sub {
-        display: block;
-        margin-top: 5px;
-        font-size: 13px;
-        line-height: 1.55;
-        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.3em;
+        color: var(--accent-soft);
       }
 
-      .hero .wx {
-        position: relative;
-        z-index: 1;
-        margin-top: 13px;
+      /* ---------- 天气行 ---------- */
+      .wx {
         display: flex;
         flex-wrap: wrap;
-        gap: 5px 16px;
-        font-size: 13px;
-        line-height: 1.5;
-        color: rgba(255, 255, 255, 0.85);
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 12px;
-        padding: 9px 12px;
+        gap: 4px 14px;
+        padding: 11px 1px 0;
+        font-size: 12.5px;
+        line-height: 1.6;
+        color: var(--muted);
       }
-      .hero .wx b { color: #f0b93e; font-weight: 800; }
+      .wx b { color: var(--ink); font-weight: 700; }
+      .wx .wx-src { width: 100%; font-size: 11.5px; }
 
-      /* ---------- Hero 各版头条速览 ---------- */
-      .hero .ticker {
-        position: relative;
-        z-index: 1;
-        margin-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.16);
-        padding-top: 11px;
-      }
-      .hero .ticker .tk-label {
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.22em;
-        color: #f0b93e;
-        margin-bottom: 5px;
-      }
-      .hero .ticker ul { margin: 0; padding: 0; list-style: none; }
-      .hero .ticker li { padding: 3.5px 0; }
-      .hero .ticker li a {
+      /* ---------- 各版头条（目录式） ---------- */
+      .ticker { margin-top: 22px; }
+      .ticker .tk-label {
         display: flex;
         align-items: baseline;
-        gap: 8px;
-        color: rgba(255, 255, 255, 0.88);
+        gap: 10px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.3em;
+        color: var(--ink);
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 7px;
+      }
+      .ticker .tk-label i {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+      .ticker ul { margin: 0; padding: 0; list-style: none; }
+      .ticker li { border-bottom: 1px solid var(--line-soft); }
+      .ticker li a {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 8.5px 1px;
+        color: var(--ink-2);
         font-size: 13.5px;
-        line-height: 1.5;
+        line-height: 1.55;
       }
-      .hero .ticker li i {
+      .ticker li .tk-sec {
         flex: none;
-        width: 6px; height: 6px;
-        border-radius: 2px;
-        position: relative;
-        top: -1px;
+        min-width: 52px;
+        font-weight: 800;
+        color: var(--accent);
+        font-size: 12.5px;
+        letter-spacing: 0.06em;
       }
-      .hero .ticker li b { font-weight: 700; color: #fff; }
 
       /* ---------- Quick nav ---------- */
       .quicknav {
-        margin-top: 14px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 8px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
       }
       .quicknav a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 13px;
-        padding: 9px 4px;
-        font-size: 13.5px;
-        font-weight: 700;
+        border: 1px solid var(--ink);
         color: var(--ink);
-        box-shadow: var(--shadow);
+        font-size: 12.5px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        padding: 5px 12px;
+        background: transparent;
       }
-      .quicknav .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
 
-      /* ---------- Decision strip ---------- */
+      /* ---------- 等你拍板 ---------- */
       .decide {
-        margin-top: 14px;
-        background: var(--amber-bg);
-        border: 1px solid var(--amber-line);
-        border-radius: 18px;
-        padding: 14px 16px 12px;
+        margin-top: 26px;
+        border: 1.5px solid var(--ink);
+        padding: 16px 18px 10px;
+        background: var(--paper);
       }
       .decide h2 {
-        margin: 0 0 8px;
-        font-size: 15.5px;
+        margin: 0 0 4px;
+        font-family: var(--serif);
+        font-size: 18px;
         font-weight: 900;
-        color: var(--amber-ink);
         display: flex;
-        align-items: center;
-        gap: 8px;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .decide h2 .cnt {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--accent);
+        letter-spacing: 0.03em;
       }
       .decide ul { margin: 0; padding: 0; list-style: none; }
       .decide li {
-        padding: 7px 0;
-        border-top: 1px dashed var(--amber-line);
-        font-size: 14.5px;
-        line-height: 1.55;
+        padding: 8px 0;
+        border-top: 1px dashed var(--line);
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ink-2);
       }
-      .decide li:first-child { border-top: none; }
-      .decide li b { font-weight: 700; }
-      .decide a { color: var(--amber-ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+      .decide li b { color: var(--ink); font-weight: 700; }
+      .decide a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
-      /* ---------- Sections ---------- */
-      section { margin-top: 30px; scroll-margin-top: 14px; }
+      /* ---------- Sections（目录式） ---------- */
+      section { margin-top: 38px; scroll-margin-top: 14px; }
       .sec-head {
         display: flex;
-        align-items: baseline;
-        gap: 9px;
-        margin: 0 2px 12px;
+        align-items: flex-end;
+        gap: 12px;
+        border-top: 2px solid var(--ink);
+        padding-top: 12px;
+        margin-bottom: 4px;
       }
-      .sec-head .bar {
-        align-self: center;
-        width: 10px; height: 10px;
-        border-radius: 3px;
+      .sec-head .no {
+        font-family: var(--serif);
+        font-size: 46px;
+        font-weight: 900;
+        line-height: 0.82;
+        color: var(--num);
         flex: none;
       }
       .sec-head h2 {
         margin: 0;
-        font-family: "Songti SC", "STSongti-SC", "STSong", "SimSun", Georgia, serif;
-        font-size: 21px;
+        font-family: var(--serif);
+        font-size: 22px;
         font-weight: 900;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
       }
       .sec-head .note {
         margin-left: auto;
-        font-size: 12.5px;
+        font-size: 12px;
         color: var(--muted);
         flex: none;
+        padding-bottom: 2px;
+        text-align: right;
       }
 
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 16px 17px 14px;
-      }
-      .card + .card { margin-top: 10px; }
+      .card { padding: 15px 1px 14px; border-bottom: 1px solid var(--line); }
       .card h3 {
         margin: 0 0 6px;
-        font-size: 17px;
+        font-size: 16.5px;
         font-weight: 700;
-        line-height: 1.45;
+        line-height: 1.5;
       }
       .card p {
         margin: 0;
         font-size: 14.5px;
-        line-height: 1.7;
-        color: var(--muted);
+        line-height: 1.78;
+        color: var(--ink-2);
       }
       .card p b, .card p strong { color: var(--ink); font-weight: 700; }
       .src {
-        margin-top: 10px;
-        font-size: 12.5px;
+        margin-top: 9px;
+        font-size: 12px;
         color: var(--muted);
         display: flex;
         align-items: center;
@@ -425,49 +373,49 @@
       .src a { font-weight: 700; }
       .tag {
         display: inline-block;
-        font-size: 11.5px;
-        font-weight: 700;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
         line-height: 1;
-        padding: 4px 8px;
-        border-radius: 999px;
-        color: #fff;
-        vertical-align: 2px;
-        margin-right: 7px;
+        padding: 3px 7px;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        vertical-align: 3px;
+        margin-right: 8px;
       }
 
       /* Featured (headline) card */
-      .card.feature { padding: 19px 18px 16px; }
-      .card.feature h3 { font-size: 20.5px; line-height: 1.4; }
-      .card.feature p { font-size: 15px; }
+      .card.feature h3 {
+        font-family: var(--serif);
+        font-size: 21px;
+        font-weight: 900;
+        line-height: 1.45;
+      }
+      .card.feature p { font-size: 14.5px; }
       .stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        margin-top: 13px;
+        margin-top: 14px;
+        border-top: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
       }
       .stats .stat {
-        background: var(--surface-2);
-        border-radius: 12px;
-        padding: 9px 6px 8px;
+        padding: 10px 6px 9px;
         text-align: center;
+        border-left: 1px solid var(--line);
       }
+      .stats .stat:first-child { border-left: none; }
       .stats .stat b {
         display: block;
-        font-size: 17px;
+        font-family: var(--serif);
+        font-size: 21px;
         font-weight: 900;
-        line-height: 1.25;
+        line-height: 1.2;
       }
       .stats .stat span { font-size: 11.5px; color: var(--muted); }
 
       /* ---------- Tasks ---------- */
-      .task {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 15px 17px 14px;
-      }
-      .task + .task { margin-top: 10px; }
+      .task { padding: 15px 1px 14px; border-bottom: 1px solid var(--line); }
       .task .t-head {
         display: flex;
         align-items: center;
@@ -477,162 +425,139 @@
         margin: 0;
         font-size: 16.5px;
         font-weight: 700;
-        line-height: 1.4;
+        line-height: 1.45;
         flex: 1;
         min-width: 0;
       }
       .badge {
         flex: none;
-        font-size: 12px;
-        font-weight: 700;
-        padding: 4px 10px;
-        border-radius: 999px;
-        line-height: 1.35;
+        font-size: 11.5px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        padding: 3px 9px;
+        border: 1px solid currentColor;
+        line-height: 1.4;
+        background: transparent;
       }
-      .badge.ok { background: rgba(31, 138, 76, 0.13); color: var(--ok); }
-      .badge.wait { background: rgba(185, 122, 14, 0.15); color: var(--wait); }
-      .badge.stuck { background: rgba(194, 59, 46, 0.12); color: var(--stuck); }
-      .badge.doing { background: rgba(36, 86, 200, 0.12); color: var(--doing); }
+      .badge.ok { color: var(--ok); }
+      .badge.wait { color: var(--wait); }
+      .badge.stuck { color: var(--stuck); }
+      .badge.doing { color: var(--doing); }
       .task p {
         margin: 7px 0 0;
         font-size: 14.5px;
-        line-height: 1.7;
-        color: var(--muted);
+        line-height: 1.78;
+        color: var(--ink-2);
       }
       .task p b { color: var(--ink); }
-      .shots {
-        display: flex;
-        gap: 4px;
-        margin-top: 12px;
-      }
-      .shots i {
-        flex: 1;
-        height: 9px;
-        border-radius: 99px;
-        background: var(--surface-2);
-        border: 1px solid var(--line);
-      }
-      .shots i.done { background: var(--ok); border-color: var(--ok); }
-      .shots i.review { background: var(--wait); border-color: var(--wait); }
-      .shots-legend {
-        display: flex;
-        gap: 14px;
-        margin-top: 7px;
-        font-size: 12px;
-        color: var(--muted);
-        flex-wrap: wrap;
-      }
-      .shots-legend span::before {
-        content: "";
-        display: inline-block;
-        width: 8px; height: 8px;
-        border-radius: 3px;
-        margin-right: 5px;
-        background: var(--surface-2);
-        border: 1px solid var(--line);
-        vertical-align: -1px;
-      }
-      .shots-legend .lg-done::before { background: var(--ok); border-color: var(--ok); }
-      .shots-legend .lg-review::before { background: var(--wait); border-color: var(--wait); }
-      .pbar {
-        height: 9px;
-        border-radius: 99px;
-        background: var(--surface-2);
-        border: 1px solid var(--line);
-        margin-top: 12px;
-        overflow: hidden;
-      }
-      .pbar i { display: block; height: 100%; border-radius: 99px; }
+      .task .src { margin-top: 9px; }
 
       /* ---------- Footer ---------- */
-      footer { margin-top: 34px; }
-      .install {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 16px 17px 14px;
+      footer { margin-top: 44px; border-top: 3px double var(--ink); padding-top: 18px; }
+      .install h2 {
+        margin: 0 0 9px;
+        font-family: var(--serif);
+        font-size: 17px;
+        font-weight: 900;
       }
-      .install h2 { margin: 0 0 8px; font-size: 16px; font-weight: 900; }
-      .install p { margin: 0 0 6px; font-size: 14px; line-height: 1.7; color: var(--muted); }
+      .install p { margin: 0 0 6px; font-size: 13.5px; line-height: 1.75; color: var(--ink-2); }
       .install p b { color: var(--ink); }
       .fineprint {
-        margin-top: 14px;
+        margin-top: 18px;
         text-align: center;
-        font-size: 12px;
+        font-size: 11.5px;
         color: var(--muted);
-        line-height: 1.8;
+        line-height: 1.9;
+        letter-spacing: 0.04em;
       }
       @media (max-width: 380px) {
-        .hero { padding: 16px 16px 15px; }
-        .hero .date-big { font-size: 47px; }
-        .hero .ov b { font-size: 20px; }
-        .hero .ov { padding: 2px 7px 0; }
-        .hero .headline .hl-title { font-size: 15.5px; }
-        .hero .ticker li a { font-size: 12.5px; }
-        .quicknav a { font-size: 12.5px; }
-        .stats .stat b { font-size: 15px; }
+        .wrap { padding: 14px 16px calc(34px + env(safe-area-inset-bottom)); }
+        .masthead .brand .en { font-size: 33px; }
+        .datebox .d { font-size: 21px; }
+        .headline .hl-title { font-size: 22px; }
+        .indexband .ib { padding: 12px 9px 10px; }
+        .indexband .ib b { font-size: 21px; }
+        .sec-head .no { font-size: 38px; }
+        .sec-head h2 { font-size: 20px; }
+        .card.feature h3 { font-size: 19px; }
+        .stats .stat b { font-size: 18px; }
       }
     </style>
   </head>
   <body>
     <div class="wrap">
 
-      <!-- ===== 页头：纯文字信息头版 ===== -->
-      <header class="hero">
-        <div class="top">
-          <div class="dow"><i></i>2026年 · 星期四</div>
-          <div class="updated">更新于 08:18</div>
+      <!-- ===== 刊头 ===== -->
+      <header class="masthead">
+        <div class="mh-top">
+          <span>VOL. 47</span>
+          <span class="accent">每日看板</span>
+          <span>EST. 2026</span>
         </div>
-        <div class="main">
-          <div class="date-big">11月<em>26日</em></div>
+        <div class="brand">
+          <div class="en">The Daily Board</div>
+          <div class="zh">每 日 看 板</div>
         </div>
-        <a class="headline" href="#ai">
-          <span class="hl-line">
-            <span class="hl-tag">今日头条</span>
-            <span class="hl-title">智谱发布 GLM-5.4：750B 参数旗舰模型，循环架构让模型“多想一轮”</span>
-          </span>
-          <span class="hl-sub">智谱 11月23日发布 GLM-5.4：750B 总参数，Loop Transformer 循环架构让 28 个计算层用同一组权重跑两遍、带着第一轮的理解复查没想透的地方，智能对标 2–3T 参数模型，上下文 1M。</span>
-        </a>
-        <div class="ov-label">今日总览</div>
-        <div class="overview">
-          <a class="ov" href="#tasks"><b class="amber">8<em>件</em></b><span>等你拍板</span></a>
-          <a class="ov" href="#tasks"><b>2<em>项</em></b><span>今日任务</span></a>
-          <div class="ov"><b>17<em>条</em></b><span>资讯 · 8 个领域</span></div>
-          <div class="ov"><b>21/6<em>℃</em></b><span>合肥今日 · 晴</span></div>
-        </div>
-        <div class="wx"><span>合肥今日 <b>晴</b></span><span>最高 <b>21℃</b></span><span>最低 <b>6℃</b></span><span>风 <b>西南风 &lt;3 级转西风 4–5 级</b></span><span>中国天气网 11月26日 07:30 更新 · 数据来源中央气象台</span></div>
-        <div class="ticker">
-          <div class="tk-label">各版头条</div>
-          <ul>
-            <li><a href="#ai"><i style="background:var(--c-ai)"></i><span><b>AI</b> · 智谱 GLM-5.4 发布，循环架构让模型多想一轮</span></a></li>
-            <li><a href="#create"><i style="background:var(--c-create)"></i><span><b>创意</b> · Sand.ai 发布 480B 视频模型 MAGI-2</span></a></li>
-            <li><a href="#culture"><i style="background:var(--c-book)"></i><span><b>文化</b> · 邓一光八十万字长篇《闭上眼睛》推出</span></a></li>
-            <li><a href="#health"><i style="background:var(--c-health)"></i><span><b>健康</b> · “轻盈巴士”开进合肥讲科学减重</span></a></li>
-            <li><a href="#hefei"><i style="background:var(--c-hefei)"></i><span><b>合肥</b> · 国际商协会大会在合肥举行</span></a></li>
-            <li><a href="#money"><i style="background:var(--c-money)"></i><span><b>AI赚钱</b> · 表姐用 AI 工具做副业，2 小时赚到第一单 120 元</span></a></li>
-            <li><a href="#events"><i style="background:var(--c-events)"></i><span><b>本周活动</b> · 李健合肥演唱会 11 月 28 日开唱</span></a></li>
-            <li><a href="#music"><i style="background:var(--c-music)"></i><span><b>音乐</b> · The Weeknd 新单《Hong Kong》采样王菲《季候風》</span></a></li>
-          </ul>
+        <div class="mh-meta">
+          <div class="datebox">
+            <div class="d">11月<em>26日</em></div>
+            <div class="w">星期四</div>
+          </div>
+          <div class="mh-side">
+            <span>2026年 · 合肥</span>
+            <span class="upd">更新于 <b>08:18</b></span>
+          </div>
         </div>
       </header>
 
+      <!-- ===== 今日头条 ===== -->
+      <a class="headline" href="#ai">
+        <span class="hl-tag">今日头条</span>
+        <span class="hl-title">智谱发布 GLM-5.4：750B 参数旗舰模型，循环架构让模型“多想一轮”</span>
+        <span class="hl-sub">智谱 11月23日发布 GLM-5.4：750B 总参数，Loop Transformer 循环架构让 28 个计算层用同一组权重跑两遍、带着第一轮的理解复查没想透的地方，智能对标 2–3T 参数模型，上下文 1M。</span>
+      </a>
+
+      <!-- ===== 今日总览：黑底索引带 ===== -->
+      <div class="indexband">
+        <div class="ib-label">今日总览 · INDEX</div>
+        <a class="ib" href="#tasks"><b class="hot">8<em>件</em></b><span>等你拍板</span></a>
+        <a class="ib" href="#tasks"><b>2<em>项</em></b><span>今日任务</span></a>
+        <div class="ib"><b>17<em>条</em></b><span>资讯 · 8 个领域</span></div>
+        <div class="ib"><b>21/6<em>℃</em></b><span>合肥今日 · 晴</span></div>
+      </div>
+      <div class="wx"><span>合肥今日 <b>晴</b></span><span>最高 <b>21℃</b></span><span>最低 <b>6℃</b></span><span>风 <b>西南风 &lt;3 级转西风 4–5 级</b></span><span class="wx-src">中国天气网 11月26日 07:30 更新 · 数据来源中央气象台</span></div>
+
+      <!-- ===== 各版头条 ===== -->
+      <div class="ticker">
+        <div class="tk-label">各版头条 <i>— In this issue</i></div>
+        <ul>
+          <li><a href="#ai"><span class="tk-sec">AI</span><span>智谱 GLM-5.4 发布，循环架构让模型多想一轮</span></a></li>
+          <li><a href="#create"><span class="tk-sec">创意</span><span>Sand.ai 发布 480B 视频模型 MAGI-2</span></a></li>
+          <li><a href="#culture"><span class="tk-sec">文化</span><span>邓一光八十万字长篇《闭上眼睛》推出</span></a></li>
+          <li><a href="#health"><span class="tk-sec">健康</span><span>“轻盈巴士”开进合肥讲科学减重</span></a></li>
+          <li><a href="#hefei"><span class="tk-sec">合肥</span><span>国际商协会大会在合肥举行</span></a></li>
+          <li><a href="#money"><span class="tk-sec">AI赚钱</span><span>表姐用 AI 工具做副业，2 小时赚到第一单 120 元</span></a></li>
+          <li><a href="#events"><span class="tk-sec">本周活动</span><span>李健合肥演唱会 11 月 28 日开唱</span></a></li>
+          <li><a href="#music"><span class="tk-sec">音乐</span><span>The Weeknd 新单《Hong Kong》采样王菲《季候風》</span></a></li>
+        </ul>
+      </div>
+
       <!-- ===== 快速跳转 ===== -->
       <nav class="quicknav" aria-label="板块快速跳转">
-        <a href="#tasks"><span class="dot" style="background:var(--accent)"></span>今日任务</a>
-        <a href="#ai"><span class="dot" style="background:var(--c-ai)"></span>AI科技</a>
-        <a href="#create"><span class="dot" style="background:var(--c-create)"></span>创意制作</a>
-        <a href="#culture"><span class="dot" style="background:var(--c-book)"></span>文化读书</a>
-        <a href="#health"><span class="dot" style="background:var(--c-health)"></span>健康生活</a>
-        <a href="#hefei"><span class="dot" style="background:var(--c-hefei)"></span>合肥本地</a>
-        <a href="#money"><span class="dot" style="background:var(--c-money)"></span>AI赚钱</a>
-        <a href="#events"><span class="dot" style="background:var(--c-events)"></span>本周活动</a>
-        <a href="#music"><span class="dot" style="background:var(--c-music)"></span>音乐上新</a>
+        <a href="#tasks">今日任务</a>
+        <a href="#ai">AI科技</a>
+        <a href="#create">创意制作</a>
+        <a href="#culture">文化读书</a>
+        <a href="#health">健康生活</a>
+        <a href="#hefei">合肥本地</a>
+        <a href="#money">AI赚钱</a>
+        <a href="#events">本周活动</a>
+        <a href="#music">音乐上新</a>
       </nav>
 
       <!-- ===== 等你拍板 ===== -->
       <div class="decide">
-        <h2>⏳ 有 8 件事等你拍板</h2>
+        <h2>有 8 件事等你拍板 <span class="cnt">— Decisions pending</span></h2>
         <ul>
           <li><b>连接器授权</b> —— OpusClip、Google Docs 已连上，剩下 <b>11 个</b>待你逐个点授权。</li>
           <li><b>AI 网站注册</b> —— Clipdrop、ElevenLabs、Claude、v0、Bolt、Replit、可灵 <b>7 个</b>还没动：回合肥后再续，还是先放着。</li>
@@ -648,7 +573,7 @@
       <!-- ===== 今日任务 ===== -->
       <section id="tasks">
         <div class="sec-head">
-          <span class="bar" style="background:var(--accent)"></span>
+          <span class="no">01</span>
           <h2>今日任务</h2>
           <span class="note">北京返程日</span>
         </div>
@@ -675,13 +600,13 @@
       <!-- ===== AI 与科技 ===== -->
       <section id="ai">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-ai)"></span>
+          <span class="no">02</span>
           <h2>AI 与科技</h2>
           <span class="note">GLM-5.4 · Ling-3.2-air 开源</span>
         </div>
 
         <div class="card feature">
-          <h3><span class="tag" style="background:var(--c-ai)">头条</span>智谱发布 GLM-5.4：750B 参数旗舰模型，Loop Transformer 循环架构</h3>
+          <h3><span class="tag">头条</span>智谱发布 GLM-5.4：750B 参数旗舰模型，Loop Transformer 循环架构</h3>
           <p>智谱 <b>11月23日</b>发布 GLM-5.4：总参数 <b>750B</b>，智能对标 <b>2–3T</b> 参数模型。核心是 Loop Transformer 循环架构——<b>28 个</b>计算层用同一组权重跑两遍，带着第一轮的理解复查没想透的地方；上下文 <b>1M</b>。成绩：HumanEval pass@1 <b>87.2%</b>、VQA v2 <b>89%</b>、TextVQA <b>76%</b>。</p>
           <div class="stats">
             <div class="stat"><b>750B</b><span>总参数</span></div>
@@ -725,7 +650,7 @@
       <!-- ===== 创意制作 ===== -->
       <section id="create">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-create)"></span>
+          <span class="no">03</span>
           <h2>创意制作</h2>
           <span class="note">MAGI-2 视频模型</span>
         </div>
@@ -740,7 +665,7 @@
       <!-- ===== 文化与读书 ===== -->
       <section id="culture">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-book)"></span>
+          <span class="no">04</span>
           <h2>文化与读书</h2>
           <span class="note">邓一光新长篇</span>
         </div>
@@ -755,7 +680,7 @@
       <!-- ===== 健康与生活 ===== -->
       <section id="health">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-health)"></span>
+          <span class="no">05</span>
           <h2>健康与生活</h2>
           <span class="note">科学减重科普</span>
         </div>
@@ -770,7 +695,7 @@
       <!-- ===== 合肥与安徽本地 ===== -->
       <section id="hefei">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-hefei)"></span>
+          <span class="no">06</span>
           <h2>合肥与安徽本地</h2>
           <span class="note">商协会大会 · 宠物医院</span>
         </div>
@@ -792,7 +717,7 @@
       <!-- ===== 用 AI 赚钱 ===== -->
       <section id="money">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-money)"></span>
+          <span class="no">07</span>
           <h2>用 AI 赚钱</h2>
           <span class="note">收入数字均标注可信度</span>
         </div>
@@ -808,7 +733,7 @@
       <!-- ===== 合肥本周活动 ===== -->
       <section id="events">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-events)"></span>
+          <span class="no">08</span>
           <h2>合肥本周活动</h2>
           <span class="note">演唱会 · 红杉艺术季</span>
         </div>
@@ -829,7 +754,7 @@
       <!-- ===== 音乐上新 ===== -->
       <section id="music">
         <div class="sec-head">
-          <span class="bar" style="background:var(--c-music)"></span>
+          <span class="no">09</span>
           <h2>音乐上新</h2>
           <span class="note">盆栽哥 · 周杰伦 · 蛋堡</span>
         </div>
@@ -853,7 +778,7 @@
         </div>
       </section>
 
-<!-- ===== 页脚 ===== -->
+      <!-- ===== 页脚 ===== -->
       <footer>
         <div class="install">
           <h2>把这个看板放到手机桌面</h2>
