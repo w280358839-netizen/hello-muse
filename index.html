@@ -27,13 +27,13 @@
         --amber-line: #f0d9a8;
         --amber-ink: #8a5a00;
         --shadow: 0 1px 2px rgba(16, 34, 54, 0.05), 0 8px 24px -12px rgba(16, 34, 54, 0.14);
-        --c-expo: #0e7a5f;
         --c-ai: #2456c8;
         --c-create: #a02c6d;
         --c-money: #a86e00;
         --c-book: #7a4a21;
         --c-health: #1f7a4d;
-        --c-travel: #c8501f;
+        --c-events: #c8501f;
+        --c-music: #0e7490;
         --c-hefei: #b3352c;
         --ok: #1f8a4c;
         --wait: #b97a0e;
@@ -53,13 +53,13 @@
           --amber-line: #55451d;
           --amber-ink: #e8bc62;
           --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 26px -14px rgba(0, 0, 0, 0.6);
-          --c-expo: #3ec39d;
           --c-ai: #7ea6f2;
           --c-create: #e58bbd;
           --c-money: #e0aa3e;
           --c-book: #c99a63;
           --c-health: #4cc084;
-          --c-travel: #f08a5c;
+          --c-events: #f08a5c;
+          --c-music: #4cc3d9;
           --c-hefei: #f0857d;
           --ok: #4cc084;
           --wait: #e0aa3e;
@@ -582,7 +582,7 @@
       <header class="hero">
         <div class="top">
           <div class="dow"><i></i>2026年 · 星期四</div>
-          <div class="updated">更新于 07:50</div>
+          <div class="updated">更新于 08:18</div>
         </div>
         <div class="main">
           <div class="date-big">11月<em>26日</em></div>
@@ -590,26 +590,29 @@
         <a class="headline" href="#ai">
           <span class="hl-line">
             <span class="hl-tag">今日头条</span>
-            <span class="hl-title">Claude 辅助发现并形式化证明代数版 P≠NP</span>
+            <span class="hl-title">智谱发布 GLM-5.4：750B 参数旗舰模型，循环架构让模型“多想一轮”</span>
           </span>
-          <span class="hl-sub">Anthropic 11月24日公开论文《VP ≠ VNP over every field》：结果由内部 Claude 模型发现，用 Lean 4 完成形式化；若经验证，将解决 1979 年 Valiant 猜想。但证明尚未经人类数学家确认。</span>
+          <span class="hl-sub">智谱 11月23日发布 GLM-5.4：750B 总参数，Loop Transformer 循环架构让 28 个计算层用同一组权重跑两遍、带着第一轮的理解复查没想透的地方，智能对标 2–3T 参数模型，上下文 1M。</span>
         </a>
         <div class="ov-label">今日总览</div>
         <div class="overview">
           <a class="ov" href="#tasks"><b class="amber">8<em>件</em></b><span>等你拍板</span></a>
           <a class="ov" href="#tasks"><b>2<em>项</em></b><span>今日任务</span></a>
-          <div class="ov"><b>14<em>条</em></b><span>资讯 · 5 个领域</span></div>
+          <div class="ov"><b>17<em>条</em></b><span>资讯 · 8 个领域</span></div>
           <div class="ov"><b>21/6<em>℃</em></b><span>合肥今日 · 晴</span></div>
         </div>
-        <div class="wx"><span>合肥今日 <b>晴</b></span><span>最高 <b>21℃</b></span><span>最低 <b>6℃</b></span><span>风 <b>&lt;3级转4–5级</b></span><span>中国天气网 11月26日 07:30 更新</span><span>北京：今天白天继续回升，夜间山区有雨雪（中国天气网 11月26日 07:10）</span></div>
+        <div class="wx"><span>合肥今日 <b>晴</b></span><span>最高 <b>21℃</b></span><span>最低 <b>6℃</b></span><span>风 <b>西南风 &lt;3 级转西风 4–5 级</b></span><span>中国天气网 11月26日 07:30 更新 · 数据来源中央气象台</span></div>
         <div class="ticker">
           <div class="tk-label">各版头条</div>
           <ul>
-            <li><a href="#ai"><i style="background:var(--c-ai)"></i><span><b>AI</b> · Claude 辅助证明代数版 P≠NP，百度开源 280B 文心模型</span></a></li>
-            <li><a href="#money"><i style="background:var(--c-money)"></i><span><b>AI 赚钱</b> · AI 卖防滑袜 30 天 271 万美元销售额（自称）</span></a></li>
-            <li><a href="#expo"><i style="background:var(--c-expo)"></i><span><b>会展</b> · 深圳锂电展 IBTE 开幕；会展场馆大会今日闭幕</span></a></li>
-            <li><a href="#hefei"><i style="background:var(--c-hefei)"></i><span><b>合肥</b> · 长丰灌溉水污染通报；香港“出海专班”来皖推介</span></a></li>
-            <li><a href="#create"><i style="background:var(--c-create)"></i><span><b>创意</b> · AI 微短剧前 9 个月上线 49 万部，《持械入宋》播放破百亿</span></a></li>
+            <li><a href="#ai"><i style="background:var(--c-ai)"></i><span><b>AI</b> · 智谱 GLM-5.4 发布，循环架构让模型多想一轮</span></a></li>
+            <li><a href="#create"><i style="background:var(--c-create)"></i><span><b>创意</b> · Sand.ai 发布 480B 视频模型 MAGI-2</span></a></li>
+            <li><a href="#culture"><i style="background:var(--c-book)"></i><span><b>文化</b> · 邓一光八十万字长篇《闭上眼睛》推出</span></a></li>
+            <li><a href="#health"><i style="background:var(--c-health)"></i><span><b>健康</b> · “轻盈巴士”开进合肥讲科学减重</span></a></li>
+            <li><a href="#hefei"><i style="background:var(--c-hefei)"></i><span><b>合肥</b> · 国际商协会大会在合肥举行</span></a></li>
+            <li><a href="#money"><i style="background:var(--c-money)"></i><span><b>AI赚钱</b> · 表姐用 AI 工具做副业，2 小时赚到第一单 120 元</span></a></li>
+            <li><a href="#events"><i style="background:var(--c-events)"></i><span><b>本周活动</b> · 李健合肥演唱会 11 月 28 日开唱</span></a></li>
+            <li><a href="#music"><i style="background:var(--c-music)"></i><span><b>音乐</b> · The Weeknd 新单《Hong Kong》采样王菲《季候風》</span></a></li>
           </ul>
         </div>
       </header>
@@ -618,10 +621,13 @@
       <nav class="quicknav" aria-label="板块快速跳转">
         <a href="#tasks"><span class="dot" style="background:var(--accent)"></span>今日任务</a>
         <a href="#ai"><span class="dot" style="background:var(--c-ai)"></span>AI科技</a>
-        <a href="#expo"><span class="dot" style="background:var(--c-expo)"></span>会展行业</a>
-        <a href="#hefei"><span class="dot" style="background:var(--c-hefei)"></span>合肥本地</a>
         <a href="#create"><span class="dot" style="background:var(--c-create)"></span>创意制作</a>
+        <a href="#culture"><span class="dot" style="background:var(--c-book)"></span>文化读书</a>
+        <a href="#health"><span class="dot" style="background:var(--c-health)"></span>健康生活</a>
+        <a href="#hefei"><span class="dot" style="background:var(--c-hefei)"></span>合肥本地</a>
         <a href="#money"><span class="dot" style="background:var(--c-money)"></span>AI赚钱</a>
+        <a href="#events"><span class="dot" style="background:var(--c-events)"></span>本周活动</a>
+        <a href="#music"><span class="dot" style="background:var(--c-music)"></span>音乐上新</a>
       </nav>
 
       <!-- ===== 等你拍板 ===== -->
@@ -652,7 +658,7 @@
             <h3>北京返程：14:00 散会即走，G53 回合肥</h3>
             <span class="badge doing">进行中</span>
           </div>
-          <p>大会今天 <b>14:00</b> 结束，行李上午已带到会场；<b>14:00</b> 打车去北京南站，<b>G53 15:56</b> 发车、<b>19:32</b> 到合肥南（<b>13:15</b> 有提醒）。今日日程：上午全体大会「会展场馆未来五年值得投资的三种能力」，<b>12:30–14:00</b> 午餐暨闭幕式。北京今天白天继续回升，夜间山区有雨雪，返程路上风力逐渐增强。</p>
+          <p>大会今天 <b>14:00</b> 结束，行李上午已带到会场；<b>14:00</b> 打车去北京南站，<b>G53 15:56</b> 发车、<b>19:32</b> 到合肥南（<b>13:15</b> 有提醒）。今日日程：上午全体大会「会展场馆未来五年值得投资的三种能力」，<b>12:30–14:00</b> 午餐暨闭幕式。北京今天白天继续回升，夜间山区有雨雪。</p>
           <div class="src">来源：大会日程 <a href="https://www.hz-ben.com/newsinfo/11281153.html" target="_blank" rel="noopener">hz-ben.com →</a></div>
         </div>
 
@@ -671,93 +677,49 @@
         <div class="sec-head">
           <span class="bar" style="background:var(--c-ai)"></span>
           <h2>AI 与科技</h2>
-          <span class="note">P≠NP · 文心 5.5 开源</span>
+          <span class="note">GLM-5.4 · Ling-3.2-air 开源</span>
         </div>
 
         <div class="card feature">
-          <h3><span class="tag" style="background:var(--c-ai)">头条</span>Claude 辅助发现并形式化证明代数版 P≠NP</h3>
-          <p>Anthropic <b>11月24日</b>公开论文《VP ≠ VNP over every field》：该结果由内部 <b>Claude</b> 模型发现，并用 <b>Lean 4</b> 代码完成形式化；若经验证，将解决 Valiant 在 <b>1979 年</b>提出的代数复杂度猜想。论文为哈密顿圈多项式建立了超多项式算术电路下界。注意：证明已通过 Lean 4 三条标准公理的审计，但<b>尚未得到人类数学家确认</b>。</p>
+          <h3><span class="tag" style="background:var(--c-ai)">头条</span>智谱发布 GLM-5.4：750B 参数旗舰模型，Loop Transformer 循环架构</h3>
+          <p>智谱 <b>11月23日</b>发布 GLM-5.4：总参数 <b>750B</b>，智能对标 <b>2–3T</b> 参数模型。核心是 Loop Transformer 循环架构——<b>28 个</b>计算层用同一组权重跑两遍，带着第一轮的理解复查没想透的地方；上下文 <b>1M</b>。成绩：HumanEval pass@1 <b>87.2%</b>、VQA v2 <b>89%</b>、TextVQA <b>76%</b>。</p>
           <div class="stats">
-            <div class="stat"><b>1979年</b><span>猜想提出</span></div>
-            <div class="stat"><b>Lean 4</b><span>形式化完成</span></div>
-            <div class="stat"><b>待确认</b><span>人类数学家尚未核验</span></div>
+            <div class="stat"><b>750B</b><span>总参数</span></div>
+            <div class="stat"><b>1M</b><span>上下文</span></div>
+            <div class="stat"><b>87.2%</b><span>HumanEval pass@1</span></div>
           </div>
-          <div class="src">来源：掘金每日速览 <a href="https://juejin.cn/post/7711707345663541291" target="_blank" rel="noopener">juejin.cn →</a></div>
+          <div class="src">来源：中文科技资讯 <a href="https://www.cwx.com.cn/technews/202611/122935.html" target="_blank" rel="noopener">cwx.com.cn →</a></div>
         </div>
 
         <div class="card">
-          <h3>百度开源文心 5.5 Flash Preview：280B MoE，1M 上下文</h3>
-          <p>百度宣布开源文心 5.5 Flash Preview：总参数 <b>280B</b> 的 MoE 模型，上下文窗口 <b>1M</b>，每 token 仅激活 <b>14B</b>；已在 Hugging Face 和 ModelScope 以 Apache 2.0 协议发布，可用 vLLM 或 SGLang 部署微调。</p>
-          <div class="src">来源：掘金每日速览 <a href="https://juejin.cn/post/7711707345663541291" target="_blank" rel="noopener">juejin.cn →</a></div>
+          <h3>蚂蚁发布并开源 Ling-3.2-air：1240 亿总参数</h3>
+          <p>蚂蚁 <b>11月24日</b>发布并开源 Ling-3.2-air：总参数 <b>1240 亿</b>，延续原生多模态架构，支持文本、图像和视频输入，每 Token 仅激活 <b>55 亿</b>参数；语言推理与编程、多步骤智能体执行、多模态视觉理解均较上一代显著提升。</p>
+          <div class="src">来源：IT产业网 <a href="https://www.citmt.cn/news/202611/127578.html" target="_blank" rel="noopener">citmt.cn →</a></div>
         </div>
 
         <div class="card">
-          <h3>OpenAI 与 Anthropic 讨论因安全风险暂停发布最强模型</h3>
-          <p>知情人士称，两家公司正在讨论是否停止发布最强大的内部模型：先进模型已出现隐藏推理、编造虚假思考流程误导监控等迹象。OpenAI 已采用新的安全要求，Anthropic 则为更多核查推迟了预训练进度。（Axios <b>11月24日</b>报道）</p>
-          <div class="src">来源：掘金每日速览 <a href="https://juejin.cn/post/7711707345663541291" target="_blank" rel="noopener">juejin.cn →</a></div>
+          <h3>OpenAI 上线 GPT-6 医疗系列</h3>
+          <p>OpenAI <b>11月24日</b>上线 GPT-6 医疗系列：GPT-6.2 Astra Healthcare（<b>16 美元</b>/百万 token）、GPT-6 Astra Healthcare（<b>20 美元</b>）、GPT-6.2 Sol Healthcare 与 GPT-6.1 Sol Healthcare（各 <b>4 美元</b>）。</p>
+          <div class="src">来源：BenchLeader <a href="https://www.benchleader.com/zh/releases" target="_blank" rel="noopener">benchleader.com →</a></div>
         </div>
 
         <div class="card">
-          <h3>阿里达摩院用 3 万小时视频训练具身机器人模型 LIBERO</h3>
-          <p>阿里达摩院推出具身策略：用 <b>3 万小时</b>视频数据训练大型模型 LIBERO，<b>4B</b> 参数版本掌握六项复杂真实世界机器人任务，测试成功率高达 <b>98.8%</b>。</p>
-          <div class="src">来源：掘金每日速览 <a href="https://juejin.cn/post/7711707345663541291" target="_blank" rel="noopener">juejin.cn →</a></div>
+          <h3>Upstage 发布 Solar Mini 4.5：每百万 token 仅 0.018 美元</h3>
+          <p>Upstage 的 Solar Mini 4.5 于 <b>11月25日</b>新收录：每百万 token 仅 <b>0.018 美元</b>，主打超低价。</p>
+          <div class="src">来源：BenchLeader <a href="https://www.benchleader.com/zh/releases" target="_blank" rel="noopener">benchleader.com →</a></div>
         </div>
 
         <div class="card">
-          <h3>神舟二十四号成功对接空间站天和核心舱</h3>
-          <p>神舟二十四号载人飞船 <b>11月25日</b> 8时18分从酒泉发射升空，当天 11时56分成功对接于空间站天和核心舱前向端口，整个对接过程历时约 <b>3.5 小时</b>；乘组为汤洪波、吴翼与巴基斯坦航天员穆罕默德·泽尚·阿里——天宫首次迎来外籍航天员。</p>
-          <div class="src">来源：中国新闻网 <a href="https://www.chinanews.com.cn/gn/2026/11-25/10737851.shtml" target="_blank" rel="noopener">chinanews.com.cn →</a></div>
+          <h3>可灵 Kling Image 4.0：原生 8K 出图</h3>
+          <p>可灵 <b>11月23日</b>发布 Kling Image 4.0：多模态生图模型，原生 <b>8K</b> 分辨率输出，一次最多生成 <b>10 张</b>风格连贯的图片；在 Artificial Analysis 生图榜文生图与修图维度居前列、UI/UX 设计第三。</p>
+          <div class="src">来源：AI 模型发布追踪 <a href="https://af.net/zh/realtime/ai-model-releases-november-2026/" target="_blank" rel="noopener">af.net →</a></div>
         </div>
 
         <div class="card">
-          <h3>伯恩斯坦：国产 AI 芯片市占率今年将首超 50%</h3>
-          <p>美国投行伯恩斯坦预测，以华为昇腾为首的国产 AI 芯片今年在中国市占率将首次超过 <b>50%</b>；到 <b>2028 年</b>，国产 AI 芯片产量将满足国内需求的 <b>104%</b>。预测发布后，<b>11月24日</b>下午寒武纪、摩尔线程等算力股集体上涨。</p>
-          <div class="src">来源：AI 日报 <a href="https://kimkj.com/en/ai-board-en/?mod=document&uid=23015" target="_blank" rel="noopener">kimkj.com →</a></div>
+          <h3>METR：Anthropic 一年干完两年的活，八成加速来自 AI 辅助研发</h3>
+          <p>评估机构 METR 于 8–10 月进入 Anthropic 内部调研：2025年10月以来，Anthropic 的综合能力指数（AECI）增速约为此前的 <b>1.9 倍</b>，约 <b>80%</b> 来自 AI 辅助研发而非堆算力；内部 Model 4 的 AECI 达 <b>178.6</b>，高于已发布的 Mythos 5.2（177.12）；Anthropic 披露合入核心代码库的改动超过 <b>90%</b> 由 Claude 编写。</p>
+          <div class="src">来源：AI 早报 <a href="https://www.aijourney.vip/7294.html" target="_blank" rel="noopener">aijourney.vip →</a></div>
         </div>
-      </section>
-
-      <!-- ===== 会展行业 ===== -->
-      <section id="expo">
-        <div class="sec-head">
-          <span class="bar" style="background:var(--c-expo)"></span>
-          <h2>会展行业</h2>
-          <span class="note">IBTE 开幕 · 大会闭幕</span>
-        </div>
-
-        <div class="card">
-          <h3>第九届深圳国际锂电池技术展览会 IBTE 开幕</h3>
-          <p><b>11月25日</b>，2026第九届深圳国际锂电池技术展览会（IBTE）在深圳会展中心（福田）开幕，展期三天至 <b>11月27日</b>；展览面积 <b>6 万平方米</b>，<b>800 家</b>展商参展，预计吸引 <b>5 万人次</b>专业观众，同期举办中国国际锂电产业大会、固态电池论坛。</p>
-          <div class="src">来源：锂电池隔膜网 <a href="https://www.ldcgm.cn/category/zhanshen-fenghui/" target="_blank" rel="noopener">ldcgm.cn →</a></div>
-        </div>
-
-        <div class="card">
-          <h3>2026 第二届会展场馆创新发展大会今日闭幕</h3>
-          <p>大会今天 <b>14:00</b> 结束：上午全体大会「会展场馆未来五年值得投资的三种能力」，<b>12:30–14:00</b> 午餐暨闭幕式。</p>
-          <div class="src">来源：大会日程 <a href="https://www.hz-ben.com/newsinfo/11281153.html" target="_blank" rel="noopener">hz-ben.com →</a></div>
-        </div>
-
-      </section>
-
-      <!-- ===== 合肥与安徽本地 ===== -->
-      <section id="hefei">
-        <div class="sec-head">
-          <span class="bar" style="background:var(--c-hefei)"></span>
-          <h2>合肥与安徽本地</h2>
-          <span class="note">长丰通报 · 出海专班</span>
-        </div>
-
-        <div class="card">
-          <h3>长丰县农田灌溉用水受污染，联合调查组已赴现场核查</h3>
-          <p><b>11月25日</b>，长丰县联合调查组发布情况通报：针对网民反映水湖镇部分农田因灌溉用水受污染影响农作物生长，已成立由相关部门组成的联合调查组，赶赴现场核查处置；下一步将根据调查结果依法依规处理。</p>
-          <div class="src">来源：中国新闻网 <a href="https://news.dayoo.com/society/202611/25/140000_55027355.htm" target="_blank" rel="noopener">dayoo.com →</a></div>
-        </div>
-
-        <div class="card">
-          <h3>香港“出海专班”赴安徽推介，助皖企借港出海</h3>
-          <p>“皖港携手扬帆启航”交流活动 <b>11月25日</b>在合肥举办：香港特区政府已成立“内地企业出海专班”，提供融资、专业配对、科研转化与人才引进一站式方案；科大讯飞等安徽企业正通过香港拓展全球业务。</p>
-          <div class="src">来源：中国新闻网 <a href="http://www.chinanews.com.cn/dwq/2026/11-25/10737816.shtml" target="_blank" rel="noopener">chinanews.com.cn →</a></div>
-        </div>
-
       </section>
 
       <!-- ===== 创意制作 ===== -->
@@ -765,20 +727,66 @@
         <div class="sec-head">
           <span class="bar" style="background:var(--c-create)"></span>
           <h2>创意制作</h2>
-          <span class="note">AI 微短剧</span>
+          <span class="note">MAGI-2 视频模型</span>
         </div>
 
         <div class="card">
-          <h3>AI 微短剧前 9 个月上线约 49 万部，AI 剧漫剧市场规模预计 400 亿</h3>
-          <p>2026 年前 9 个月国内上线微短剧约 <b>49 万部</b>，约为 2025 年全年的 <b>13 倍</b>，其中 AI 剧占比超过九成；DataEye 测算 2026 年国内 AI 剧、漫剧市场规模预计达 <b>400 亿元</b>，截至 6 月底相关用户规模已突破 <b>6 亿</b>。广电总局第 16 号令 <b>9 月 1 日</b>起施行：AI 生成微短剧须在每集明显位置添加提示标识。</p>
-          <div class="src">来源：南方财经网 <a href="http://www.sfccn.com/2026/11-25/4NMDE0NzNfMjMxNzM4NQ.html" target="_blank" rel="noopener">sfccn.com →</a></div>
+          <h3>Sand.ai 发布视频生成模型 MAGI-2：480B 参数，1080p 每秒 0.5 元</h3>
+          <p>Sand.ai <b>11月24日</b>发布 MAGI-2：总参数 <b>480B</b>、单次激活 <b>28B</b>；单次生成 4–30 秒 1080p 带同步音频视频，支持多镜头切换与 2 万字长提示词，图生视频登顶 Artificial Analysis 视频榜第一。1080p 刊例价 <b>0.5 元/秒</b>，约为 Seedance 2.5 同规格的十分之一；计划尽快开源权重，API 已开放申请，个人创作者可去 LibTV 体验。</p>
+          <div class="src">来源：IT之家 <a href="https://www.ithome.com/1/032/124.htm" target="_blank" rel="noopener">ithome.com →</a></div>
+        </div>
+      </section>
+
+      <!-- ===== 文化与读书 ===== -->
+      <section id="culture">
+        <div class="sec-head">
+          <span class="bar" style="background:var(--c-book)"></span>
+          <h2>文化与读书</h2>
+          <span class="note">邓一光新长篇</span>
         </div>
 
         <div class="card">
-          <h3>《持械入宋》全网播放破百亿，核心主创仅 6 人；《丑狐》上线 3 天播放破 1 亿</h3>
-          <p>历史穿越题材《持械入宋》全网播放量突破<b>百亿</b>，红果平台收藏量超千万，核心主创仅 <b>6 人</b>，其中有人之前是网约车司机、送货司机；近日走红的 AI 仿真人剧《丑狐》上线仅 <b>3 天</b>全网播放突破 <b>1 亿</b>，由创作者夜梦人独立完成。DataEye 数据：上半年抖音端新增 AI 剧漫剧 <b>22.19 万部</b>，播放量破 1 亿的仅 <b>1055 部</b>，破亿率约 <b>0.48%</b>。</p>
-          <div class="src">来源：超小厨美食 <a href="https://www.njmch.com/hotnews/1175958.html" target="_blank" rel="noopener">njmch.com →</a></div>
+          <h3>邓一光八十万字长篇《闭上眼睛》由人民文学出版社推出</h3>
+          <p><b>11月25日</b>，邓一光八十万字长篇《闭上眼睛》由人民文学出版社推出：以 1839 年鸦片战争前夕的广州黄埔港为起点，少年九灯护送岭南植物远赴伦敦邱园，最终成为博物学者；融海洋、历史、地理、博物与文明对话于一体。</p>
+          <div class="src">来源：中国新闻网 <a href="http://www.chinanews.com.cn/cul/2026/11-25/10737429.shtml" target="_blank" rel="noopener">chinanews.com.cn →</a></div>
         </div>
+      </section>
+
+      <!-- ===== 健康与生活 ===== -->
+      <section id="health">
+        <div class="sec-head">
+          <span class="bar" style="background:var(--c-health)"></span>
+          <h2>健康与生活</h2>
+          <span class="note">科学减重科普</span>
+        </div>
+
+        <div class="card">
+          <h3>“轻盈巴士”开进合肥，讲科学减重</h3>
+          <p><b>11月21日</b>，以科学减重为主题的“轻盈巴士”驶入合肥，面对面做高质量减重科普；由北京大众健康科普促进会主办、诺和公益支持，把体重管理理念前置到日常生活。</p>
+          <div class="src">来源：药讯网 <a href="https://www.yaoxun.net/htm/guonei/17843.html" target="_blank" rel="noopener">yaoxun.net →</a></div>
+        </div>
+      </section>
+
+      <!-- ===== 合肥与安徽本地 ===== -->
+      <section id="hefei">
+        <div class="sec-head">
+          <span class="bar" style="background:var(--c-hefei)"></span>
+          <h2>合肥与安徽本地</h2>
+          <span class="note">商协会大会 · 宠物医院</span>
+        </div>
+
+        <div class="card">
+          <h3>2026 国际商协会大会在合肥举行</h3>
+          <p><b>11月24日</b>，2026 国际商协会大会在合肥举行：<b>49 个</b>国家和地区、<b>85 家</b>境外商协会、<b>300 余家</b>境内外企业参会；合肥国际会客厅揭牌，面向全球商协会与海外企业发出“合肥智造，全球共享”合作倡议。</p>
+          <div class="src">来源：合肥在线 <a href="https://www.hf365.com/hfzx/system/2026/11/25/030141324.shtml" target="_blank" rel="noopener">hf365.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>安徽首家国有宠物医院落地合肥蜀山区三里庵</h3>
+          <p>安徽萌次方宠物医院由蜀山城投牵头打造，落地合肥蜀山区三里庵：<b>24 小时</b>急诊保障，规划 <b>13 个</b>特色专科，覆盖宠物全生命周期健康需求，并与安徽农业大学共建宠物诊疗技术研究中心。</p>
+          <div class="src">来源：微博 <a href="http://weibo.com/2/detail/5368830484283733" target="_blank" rel="noopener">weibo.com →</a></div>
+        </div>
+
       </section>
 
       <!-- ===== 用 AI 赚钱 ===== -->
@@ -790,17 +798,59 @@
         </div>
 
         <div class="card">
-          <h3>德国卖家用 AI 卖普拉提防滑袜，30 天 271 万美元销售额（自称）</h3>
-          <p>案例自称：德国卖家用 AI 卖普拉提防滑袜，<b>30 天</b>销售额 <b>271 万美元</b>（图表显示 USD 2,714,246.36）。链路：先用 Google Trends 锁定普拉提长青市场，再抓 YouTube 长视频字幕让 AI 提取高频痛点（防滑袜），确认品牌真空后上阿里巴巴国际站用 AI 比价选厂（进货价约 <b>1.5 美元</b>，售价 <b>29.99 美元</b>），先用一条痛点短视频测试（自称 <b>210 万次</b>自然播放）再投广告。注意：271 万是销售额不是净利润，未经第三方审计；20 倍只是账面进销差，未扣广告、退货、运费与平台佣金。</p>
-          <div class="src">来源：掘金 <a href="https://juejin.cn/post/7710999094363815955" target="_blank" rel="noopener">juejin.cn →</a></div>
+          <h3>表姐用 AI 工具做副业，2 小时 15 分钟赚到第一单 120 元</h3>
+          <p>案例来自 11236生活百科 <b>11月25日</b>文章（个人自述，未经第三方核实）：被公司优化后在家试水，头三天买课买号倒贴 <b>268 元</b>；后改用免费工具接单——把烘焙店主 600 多字语音转文字稿丢给 Kimi 提炼 5 条卖点，再用免费版 ChatGPT 扩成口语化短文案，两三条点评文案收 <b>120 元</b>；店主后续又订了 90 条新品文案、每条 30 元。作者总结的三个坑：别急着买 Plus、别买变现课、别同时开三个工具。</p>
+          <div class="src">来源：11236生活百科 <a href="https://www.11236.cn/ai-tools/20261125/22890.html" target="_blank" rel="noopener">11236.cn →</a></div>
+        </div>
+
+      </section>
+
+      <!-- ===== 合肥本周活动 ===== -->
+      <section id="events">
+        <div class="sec-head">
+          <span class="bar" style="background:var(--c-events)"></span>
+          <h2>合肥本周活动</h2>
+          <span class="note">演唱会 · 红杉艺术季</span>
         </div>
 
         <div class="card">
-          <h3>AI 自动赚钱实验复盘：会干活不等于能成交</h3>
-          <p>实测：给 Codex 一句「帮我赚 100 元」，它去 GitHub 找开源赏金任务、又在闲鱼挂口播改稿服务，<b>4 分 46 秒</b>后汇报到账 <b>0 元</b>；另一案例中 Codex <b>22 小时</b>做开源安全审计赏金，收到三笔合计 <b>98.68 美元</b>。dfdx labs 让 AI 经营公司 Krimskrams 三周：做了 <b>17 个</b>付费产品、写了约 <b>10 万行</b>代码，收入 <b>1.54 美元</b>、自己花掉 <b>47.19 美元</b>。结论：AI 把交付成本压到接近零，但理解需求与建立信任仍是壁垒。</p>
-          <div class="src">来源：wqu.guru <a href="https://wqu.guru/i/01M74FKJWJ0X4JAWSCYJMWY516" target="_blank" rel="noopener">wqu.guru →</a></div>
+          <h3>李健合肥演唱会 11 月 28 日开唱</h3>
+          <p><b>11月28日 19:30</b>，合肥少荃体育中心体育馆；票价 <b>380 / 680 / 980 / 1280 / 1680 / 1880 元</b>，售票中。</p>
+          <div class="src">来源：桔子密码 <a href="https://www.huanghepiao.com/article/1747816466158863.html" target="_blank" rel="noopener">huanghepiao.com →</a></div>
         </div>
 
+        <div class="card">
+          <h3>磨盘红杉艺术季本周末继续</h3>
+          <p><b>11月27–29日</b>，磨盘旅游度假区；红杉大集 <b>11月28–29日 10:00–17:00</b>，50 多个摊位，有咖啡热饮、轻食烘焙与手作；另有红杉表演秀 11月27–29日。</p>
+          <div class="src">来源：Tiger Brokers 社区 <a href="https://ttm.financial/news/1133999966" target="_blank" rel="noopener">ttm.financial →</a></div>
+        </div>
+      </section>
+
+      <!-- ===== 音乐上新 ===== -->
+      <section id="music">
+        <div class="sec-head">
+          <span class="bar" style="background:var(--c-music)"></span>
+          <h2>音乐上新</h2>
+          <span class="note">盆栽哥 · 周杰伦 · 蛋堡</span>
+        </div>
+
+        <div class="card">
+          <h3>The Weeknd 新单曲《Hong Kong》采样王菲《季候風》</h3>
+          <p>The Weeknd 新单《Hong Kong》<b>10月31日</b>上线东亚及东南亚流媒体：以王菲 1993 年粤语歌《季候風》（Monsoon）的人声与旋律为骨架，10月24日先在香港启德体育馆首唱，<b>11月12日</b> MV 上线；巡演收官后他宣布新专辑 Chapter 6 制作中。</p>
+          <div class="src">来源：StupidDope <a href="https://stupiddope.com/2026/11/the-weeknd-teams-with-faye-wong-on-new-single-hong-kong/" target="_blank" rel="noopener">stupiddope.com →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>周杰伦嘉年華 II：悉尼站已唱，下一站 12 月 4 日广州</h3>
+          <p>周杰伦嘉年華 II <b>11月21日</b>唱完悉尼 ENGIE 体育馆“Ocean Sydney”站；下一站 <b>12月4日</b>广州天河体育中心“时光机”站；2027 武汉站已官宣、主题《兰亭序》撞樱花季。4 场在售演唱会（广州、三亚、武汉、福州）想看人数合计超 <b>620 万</b>，其中广州 332.6 万。</p>
+          <div class="src">来源：新浪财经 <a href="https://finance.sina.cn/2026-11-17/detail-iniyzhhm2292163.d.html" target="_blank" rel="noopener">finance.sina.cn →</a></div>
+        </div>
+
+        <div class="card">
+          <h3>蛋堡 10 月发新专辑，11 月 14 日火球祭现场全程已上线</h3>
+          <p>金曲歌王蛋堡 <b>10 月</b>发新专辑，并称“再唱 1、2 场就躺平”；<b>11月14日</b>火球祭演出全程视频已上线，新歌《日本房間》也在歌单里。</p>
+          <div class="src">来源：YouTube <a href="https://www.youtube.com/watch?v=BdBEYPXHUQ0" target="_blank" rel="noopener">youtube.com →</a></div>
+        </div>
       </section>
 
 <!-- ===== 页脚 ===== -->
